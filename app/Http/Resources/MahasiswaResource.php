@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Resources;
-
+use App\Http\Requests\StoreMahasiswaRequests;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class MahasiswaResource extends JsonResource
@@ -15,9 +15,12 @@ class MahasiswaResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'nim'=>$this->nim,
+            'nim'=>$request->nim,
             'nama'=>$this->nama,
-            'jurusan'=>strtoupper($this->jurusan)
+            'kelas_id'=>$this->kelas_id,
+            'jurusan'=>strtoupper($this->jurusan),
+            'foto'=>$this->Foto,
+            
         ];
     }
 }
