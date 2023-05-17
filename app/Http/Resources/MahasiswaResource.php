@@ -17,6 +17,7 @@ class MahasiswaResource extends JsonResource
         return [
             'nim'=>$this->nim,
             'nama'=>$this->nama,
+            'jurusan'=>strtoupper($this->jurusan)
         ];
     }
 }
