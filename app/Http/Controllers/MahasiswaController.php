@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Mahasiswa;
 use App\Http\Resources\MahasiswaResource;
 use Illuminate\Http\Request;
 
